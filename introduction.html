@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('int.jpg') no-repeat center center fixed; /* Add your image path here */
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0f2f7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 60px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Optional dark overlay for better text contrast */
+            z-index: -1; /* Place overlay behind content */
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 3.5em;
+            color: #64ffda;
+            text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda, 0 0 30px #64ffda;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            animation: fadeIn 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 30px;
+            color: #d1d5db;
+        }
+
+        .back-button-container {
+            text-align: center;
+        }
+
+        .back-button {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #008ba7;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .home-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .home-button a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .home-button:hover a {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="heading">Introduction</div>
+    <div class="container">
+        <p>
+            Survey Introduction:<br><br>
+
+            We invite you to participate in this survey aimed at understanding the experiences, challenges, and contributions
+            of working women in today's society. As more women join the workforce across various sectors, it is important
+            to explore how their roles are evolving, what obstacles they face, and how society perceives and supports their
+            participation in professional life. Your responses will help us gain valuable insights into these issues and
+            contribute to informed discussions on gender equality, workplace dynamics, and social development. All answers
+            will remain confidential and will be used for research purposes only.
+        </p>
+    </div>
+    <div class="home-button">
+        <a href="A.html">Home</a>
+    </div>
+
+    <script>
+        // Subtle animation for the container on mouseover
+        const container = document.querySelector('.container');
+        if (container) {
+            container.addEventListener('mouseover', () => {
+                container.style.transform = 'scale(1.01)';
+                container.style.boxShadow = '0 12px 48px 0 rgba(31, 38, 135, 0.5)';
+            });
+
+            container.addEventListener('mouseout', () => {
+                container.style.transform = 'scale(1)';
+                container.style.boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.37)';
+            });
+        }
+    </script>
+</body>
+
+</html>
